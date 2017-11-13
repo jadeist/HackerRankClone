@@ -74,7 +74,3 @@ Para finalizar, se desactiva el entorno virtual
 ```
 
 Y listo, eso es todo. :)
-
-
-# HackerRankClone
-# HackerRankClone
