@@ -48,7 +48,7 @@ DATABASES = {
 }
 ```
 
-## Para correrlo con una base de datos SQLite:
+### Para correrlo con una base de datos SQLite:
 
 En el caso de que no sea precisamente necesario usar PostgreSQL, se puede optar por usar SQLite que ya viene por default en DJango y no es necesario realizar ningun cambio al proyecto.
 
