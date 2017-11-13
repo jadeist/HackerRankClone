@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Problema{% endblock title %}
+{% block content %}
+	<h3>Problema {{title}}</h3>
+	
+	<p>{{ contents.pregunta }}</p>
+	<p><i><b>Instrucciones</b>: {{ contents.instrucciones }}</i></p>
+      <form action="results" method="POST">
+      {% csrf_token %}
+      	<input type="hidden" name="id_issue" value="{{title}}">
+ 		<div class="input-field col s12">
+          <textarea id="textarea1" name="textarea1" class="materialize-textarea" style="padding:0 90px;"></textarea>
+          <label for="textarea1">Respuesta:</label>
+        </div>
+
+        <p>
+	      <input type="submit" name="submit" value="Aceptar" class="btn waves-effect waves-light" />
+	    </p>
+      </form>	
+	
+{% endblock content %}

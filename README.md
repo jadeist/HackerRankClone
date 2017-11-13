@@ -25,10 +25,14 @@ $ source venv/bin/activate
 ```
 
 ```
-(venv)$ pip install django request djangorestframework psycopg2
+(venv)$ pip install django requests djangorestframework psycopg2
 ```
 
+### Para correrlo con una base de datos de PostgreSQL:
+
 Con las anteriores lineas de comando tendremos configurado nuestro entorno virtual "venv" para poder correr el proyecto, a demás de eso, necesitamos tambien crear un superusuario y una base de datos en PostgreSQL mediante pgAdmin v4 (obviaremos la creacion de un usuario superuser y una base de datos asignada a dicho usuario). Posteriormente configuraremos en el archivo ./settings.py dentro del proyecto los parametros para la conexion a la base de datos.
+
+Este archivo se encuentra en la rama "para PostgreSQL", por si se desea optar por esta opcion
 
 **Extracto de la linea 78 de ./settings.py**
 ```
@@ -44,10 +48,17 @@ DATABASES = {
 }
 ```
 
-Después de asegurarnos que la base de datos está corriendo, procederemos a realizar el primer test para asegurarnos que todo está en orden mediante la siguiente linea de codigo dentro de la carpeta ./project_hackerrank/ donde se encuentra nuestro archivo manage.py y con nuestro entorno virtual activado
+## Para correrlo con una base de datos SQLite:
+
+En el caso de que no sea precisamente necesario usar PostgreSQL, se puede optar por usar SQLite que ya viene por default en DJango y no es necesario realizar ningun cambio al proyecto.
+
+
+
+
+Después de asegurarnos que la base de datos está corriendo (sea SQLite o PostgreSQL), procederemos a realizar el primer test para asegurarnos que todo está en orden mediante la siguiente linea de codigo dentro de la carpeta ./project_hackerrank/ donde se encuentra nuestro archivo manage.py y con nuestro entorno virtual activado
 
 ```
-(venv)$ .../project_hackerrank/  python manage.py check out
+(venv)$ .../project_hackerrank/  python manage.py check
 ```
 
 Si la consola nos devuelve un texto como el siguiente

@@ -1,0 +1,33 @@
+{% load static %}
+<html>
+	<header>
+		<title>{% block title %}{% endblock title %}</title>
+		<link rel="stylesheet"  href="{% static "css/materialize.min.css" %}">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		{% block css %}{% endblock css %}
+		<style>
+			#pages{ margin:0 auto; width:90%; }
+		</style>			
+	</header>
+	<body>
+		<div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper blue-grey darken-4">
+				<a href="/" class="brand-logo"><img src='/static/img/logooficial.png' width='100px' style='margin:6px' /></a>
+					<ul id="nav-mobile" class="right hide-on-med-and-down">
+						<li><a href='../'>Home</a></li>
+						<li><a href='/activity/'>Activity</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div id="pages">
+			{% block content %}
+			{% endblock content %}	
+		</div>	
+	</body>
+	<script src="{% static 'js/jquery-3.2.1.min.js' %}"> </script>
+	<script src="{% static 'css/materialize.min.js' %}"> </script>
+	{% block js %}{% endblock js %}
+
+</html>

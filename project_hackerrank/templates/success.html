@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Verificar{% endblock title %}
+{% block content %}
+	<h3>Respuesta</h3>
+	{% csrf_token %}
+	
+	<p>Tu respuesta <b><i>{{ contents }}</i></b> es correcta.</p>
+	
+	<center><img src="/static/img/goodjob.png"></center>
+	
+{% endblock content %}
