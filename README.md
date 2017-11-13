@@ -47,10 +47,17 @@ DATABASES = {
     },
 }
 ```
+A demás, se necesitará poblar la base de datos con los problemas y las respuestas correctas si se elige esta opcion.
 
 ### Para correrlo con una base de datos SQLite:
 
 En el caso de que no sea precisamente necesario usar PostgreSQL, se puede optar por usar SQLite que ya viene por default en DJango y no es necesario realizar ningun cambio al proyecto.
+
+### Datos del administrador de django:
+
+URL: 127.0.0.1:8000/admin
+User: root
+Password: toortoor
 
 
 
